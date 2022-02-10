@@ -18,7 +18,7 @@ export default function ProductAdd() {
     mainImg: "",
     subImg: "",
   });
-  const { name, price, category, description, mainImg, subImg } = formValue;
+  const { name, price, category, description, subImg } = formValue;
   const formChange = (e) => {
     e.preventDefault();
     setFormValue({ ...formValue, [e.target.name]: e.target.value });

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./PageNotFound.module.scss";
 import { Container } from "react-bootstrap";
-import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 export default function PageNotFound() {

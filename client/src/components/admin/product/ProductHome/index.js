@@ -8,7 +8,6 @@ import {
   fetchAsyncProduct,
   getAllProduct,
   getLoading,
-  fetchOneAsyncProduct,
 } from "features/admin/productSlice";
 
 export default function ProductHome() {

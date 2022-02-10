@@ -175,7 +175,6 @@ export default function Sidebar(props) {
                         value='t-shirt'
                         onClick={handleClick}
                         className={styles.checkbox}
-                        onClick={handleClick}
                       />
                       <span className={styles.box}></span>
                       Áo thun
@@ -189,7 +188,6 @@ export default function Sidebar(props) {
                         type='checkbox'
                         value='sweater'
                         className={styles.checkbox}
-                        onClick={handleClick}
                       />
                       <span className={styles.box}></span>
                       Áo len

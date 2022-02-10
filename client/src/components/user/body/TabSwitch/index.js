@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./TabSwitch.module.scss";
-import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { Container } from "react-bootstrap";
 export default function TabSwitch(props) {

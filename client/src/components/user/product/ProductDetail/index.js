@@ -280,34 +280,34 @@ export default function ProductDetail() {
         </Row>
         <ul className={styles.tabList}>
           <li className={styles.tabItem}>
-            <a
+            <span
               className={clsx(styles.tabLink, {
                 [styles.active]: tabContent === "review",
               })}
               onClick={() => setTabContent("review")}
             >
               Đánh giá
-            </a>
+            </span>
           </li>
           <li className={styles.tabItem}>
-            <a
+            <span
               className={clsx(styles.tabLink, {
                 [styles.active]: tabContent === "shipping",
               })}
               onClick={() => setTabContent("shipping")}
             >
               Chính sách vận chuyển
-            </a>
+            </span>
           </li>
           <li className={styles.tabItem}>
-            <a
+            <span
               className={clsx(styles.tabLink, {
                 [styles.active]: tabContent === "tableSize",
               })}
               onClick={() => setTabContent("tableSize")}
             >
               Bảng size
-            </a>
+            </span>
           </li>
         </ul>
         <div className={styles.tabContent}>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ProductForm from "../ProductForm";
-import styles from "./ProductEdit.module.scss";
-import clsx from "clsx";
 import { useDispatch, useSelector } from "react-redux";
 import { Container } from "react-bootstrap";
 import {
@@ -35,7 +33,7 @@ export default function ProductEdit() {
       dispatch(resetProduct());
       dispatch(setLoading(true));
     };
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   useEffect(() => {
     if (product)
@@ -49,20 +47,12 @@ export default function ProductEdit() {
         // img3: product.img[3].url || "",
       });
   }, [product]);
-  const { name, price, category, description, img1, img2, img3 } = formValue;
   const handleChange = (e) => {
     e.preventDefault();
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formAdd = {
-      name,
-      price,
-      category,
-      description,
-      img: [{ url: img1 }, { url: img2 }, { url: img3 }],
-    };
   };
   let body = null;
   if (loading) {

@@ -85,6 +85,7 @@ export default function Header() {
                         <img
                           className={styles.img}
                           src='https://res.cloudinary.com/tuanfs/image/upload/v1642872166/fashion-shop/rose_vittua.jpg'
+                          alt='Ảnh đại diện'
                         />
                       </div>
                       <ul className={clsx(styles.dropdown)}>
@@ -93,6 +94,7 @@ export default function Header() {
                             <img
                               className={styles.img}
                               src='https://res.cloudinary.com/tuanfs/image/upload/v1642872166/fashion-shop/rose_vittua.jpg'
+                              alt='Ảnh đại diện'
                             />
                           </div>
                           <div className={styles.info}>

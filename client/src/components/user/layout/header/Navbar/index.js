@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Navbar.module.scss";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-import { BsXLg } from "react-icons/bs";
 
 export default function Navbar(props) {
   const { showModalNav, onHideModalNav } = props;

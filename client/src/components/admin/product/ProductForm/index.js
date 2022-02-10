@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Button } from "react-bootstrap";
-import clsx from "clsx";
 import styles from "./ProductForm.module.scss";
 
 export default function ProductForm(props) {
-  const { formValue, onSubmit, onChange, abc, onChangeFile } = props;
-  const { name, price, category, description, subImg, mainImg } = formValue;
+  const { formValue, onSubmit, onChange, onChangeFile } = props;
+  const { name, price, category, description } = formValue;
 
   return (
     <>

@@ -27,7 +27,6 @@ export default function LoginAdmin() {
       navigate("/admin/product");
     }
   }, [dispatch, isAuthenticated]);
-  console.log("cfccv");
   return (
     <Container>
       <div className={styles.loginForm}>

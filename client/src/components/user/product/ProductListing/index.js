@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProductItem from "../ProductItem";
 import styles from "./ProductListing.module.scss";
 import { Row, Col } from "react-bootstrap";

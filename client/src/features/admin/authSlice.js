@@ -75,7 +75,6 @@ const authSlice = createSlice({
   },
 });
 
-const { fetchAuthenticatedAdmin } = authSlice.actions;
 export const { logOut } = authSlice.actions;
 export const getLoadingAdmin = (state) => state.authAdmin.loading;
 export const getIsAuthenticatedAdmin = (state) =>
