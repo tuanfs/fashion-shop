@@ -1,0 +1,25 @@
+@import "commons/variables";
+.reviewProduct {
+  margin-top: 30px;
+  .heading {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+  }
+  .starList {
+    color: #faae00;
+  }
+  .table {
+    .comment {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 600px;
+    }
+    .link {
+      text-decoration: none;
+      color: $text-third-color;
+      font-size: 1.4rem;
+    }
+  }
+}

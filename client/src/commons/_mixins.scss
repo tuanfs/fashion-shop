@@ -1,0 +1,29 @@
+@mixin pc() {
+  @media screen and (min-width: 1114px) {
+    @content;
+  }
+}
+
+@mixin pcLow() {
+  @media screen and (max-width: 994px) and (min-width: 1113px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: 993px) and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tabletAndMobile() {
+  @media screen and (max-width: 994px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}

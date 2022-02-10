@@ -1,0 +1,26 @@
+@import "commons/variables";
+
+.paginationWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  .pagination {
+    display: flex;
+    .item {
+      padding: 6px 16px;
+      margin: 0 10px;
+      color: $text-secondary-color;
+      font-size: 1.6rem;
+      border-radius: 2px;
+    }
+    .itemActive {
+      background-color: $main-color;
+      color: $primary-color;
+    }
+    .itemNext {
+    }
+    .itemPrevious {
+    }
+  }
+}

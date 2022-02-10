@@ -1,0 +1,20 @@
+@import "commons/variables";
+
+.container {
+  position: relative;
+  transition: all 0.5s ease;
+}
+.tabContent {
+  display: none;
+}
+
+.container:hover .btnSlide {
+  display: block;
+}
+.tabContent.active {
+  display: block;
+  transition: all 0.5s ease;
+}
+.loading {
+  margin-top: 100px;
+}

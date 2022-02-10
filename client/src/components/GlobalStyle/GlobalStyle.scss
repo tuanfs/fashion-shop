@@ -1,0 +1,231 @@
+@import "commons/variables";
+@import "commons/mixins";
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  // background-color: $background-body-color !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App ul,
+.App li {
+  list-style: none;
+}
+.App .form-control {
+  border-color: none;
+  outline: none;
+  font-size: 1.4rem;
+}
+.App .search-admin.form-control:focus {
+  border-color: #198754;
+  box-shadow: none;
+}
+.App .form-control:focus {
+  border-color: $border-primary-color;
+  box-shadow: none;
+}
+.App {
+  font-size: 1.5rem;
+}
+.App a {
+  color: $text-primary-color;
+  text-decoration: none;
+}
+.App a:hover {
+  color: $text-primary-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.App .primary-btn {
+  display: block;
+  background-color: $text-primary-color;
+  color: white;
+  height: 46px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+.App .primary-btn:hover,
+.App .primary-btn:active,
+.App .primary-btn:focus {
+  background-color: $main-color;
+  outline: none;
+  border: none;
+}
+
+.btn-cm {
+  display: block;
+  background-color: $text-primary-color;
+  color: white;
+  height: 44px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  min-width: 140px;
+  border-radius: 3px;
+}
+
+.App .section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 100%;
+}
+
+// Product content
+.product-content {
+  text-align: center;
+  padding: 4px 10px;
+}
+.product-description {
+  font-size: 1.4rem;
+  color: $text-secondary-color;
+}
+.product-name {
+  margin-top: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-name:hover .product-link {
+  color: $main-color;
+}
+.product-ratings {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+.product-count-review {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 2px;
+  color: $text-secondary-color;
+}
+.product-price-new {
+  font-weight: 600;
+  margin-right: 10px;
+  color: $main-color;
+  display: inline-block;
+}
+.product-price-old {
+  color: $text-secondary-color;
+  font-weight: 600;
+  text-decoration: line-through;
+  display: inline-block;
+}
+.product-btn-add {
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid $text-primary-color;
+  background-color: $primary-color;
+  font-weight: 200;
+  padding: 4px 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-btn-add:hover {
+  background-color: $main-color;
+  border: none;
+  color: $primary-color;
+  border: 1px solid $main-color;
+}
+
+// Button Slide
+.btn-slide {
+  position: absolute;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  width: 40px;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 0;
+  transform: translateY(-50%);
+  top: calc(50% + 15px);
+  z-index: 3;
+  display: none;
+  .btn-slide-icon {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    color: $text-primary-color;
+  }
+  &:hover {
+    background-color: $main-color;
+  }
+  &:hover .btn-slide-icon {
+    color: $primary-color;
+    opacity: 1;
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+.btn-slide-left {
+  left: -20px;
+}
+.btn-slide-right {
+  right: -20px;
+}
+
+.footer input:-webkit-autofill,
+.footer input:-webkit-autofill:hover,
+.footer input:-webkit-autofill:focus,
+.footer input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $third-color inset !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: $input-color;
+  -webkit-box-shadow: 0 0 0 30px $primary-color inset !important;
+}
+
+// swiper
+
+.swiper-product-detail .swiper-slide {
+  opacity: 0.6;
+}
+
+.swiper-product-detail .swiper-slide-thumb-active {
+  border: 2px solid $main-color;
+  opacity: 1;
+}
+
+// Responsive
+
+@include mobile() {
+  .d-xs-none {
+    display: none;
+  }
+}
+
+@include tabletAndMobile() {
+  .d-xs-md-none {
+    display: none;
+  }
+}

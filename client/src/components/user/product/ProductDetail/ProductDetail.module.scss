@@ -1,0 +1,271 @@
+@import "commons/variables";
+@import "commons/mixins";
+.container {
+  background-color: $primary-color;
+  .productDetail {
+    .content {
+      margin-left: 20px;
+      font-size: 1.6rem;
+      .contentItem {
+        margin-bottom: 20px;
+        .label {
+          font-weight: 500;
+          color: $text-secondary-color;
+        }
+      }
+      .name {
+        font-size: 2.4rem;
+      }
+      .sku {
+        color: $text-secondary-color;
+      }
+      .size {
+        .sizeText {
+          font-weight: 600;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+      }
+      .count {
+        display: inline-flex;
+        background-color: $primary-color;
+
+        .countBtn {
+          padding: 10px;
+          border: 1px solid #e8e8e8;
+          background-color: $primary-color;
+          .icon {
+            font-size: 2rem;
+          }
+          &:hover {
+            background-color: $main-color;
+            color: $primary-color;
+          }
+          &:disabled:hover {
+            background-color: $primary-color;
+            color: #bfbfbf;
+          }
+        }
+        .countText {
+          width: 80px;
+          border: 1px solid #e8e8e8;
+          border-left: none;
+          border-right: none;
+          display: flex;
+          .input {
+            margin: auto;
+            font-size: 1.6rem;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      .btnAdd {
+        font-size: 1.7rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+      .share {
+        .icon {
+          font-size: 2.6rem;
+          margin: 0 10px;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+      .policy {
+        padding: 10px 0;
+        border: 1px solid #e8e8e8;
+        border-left: none;
+        border-right: none;
+        .item {
+          display: flex;
+          align-items: center;
+          .icon {
+            width: 20px;
+          }
+          .description {
+            margin-left: 10px;
+            color: #212121;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .tabList {
+      display: flex;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e8e8e8;
+      .tabItem {
+        margin-right: 20px;
+        .tabLink {
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: #212121;
+          &:hover {
+            color: $main-color;
+            cursor: pointer;
+          }
+        }
+        .tabLink.active {
+          color: $main-color;
+        }
+      }
+    }
+
+    .reviews {
+      padding: 15px;
+      border: 1px solid #e8e8e8;
+      .reviewsList {
+        .reviewItem {
+          margin-bottom: 20px;
+
+          .avatar {
+            width: 100px;
+
+            .avatarItem {
+              width: 100%;
+            }
+          }
+          .content {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e8e8e8;
+            position: relative;
+            border-radius: 2px;
+            @include tabletAndMobile() {
+              top: 10px;
+              margin-left: 15px;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              background-color: $primary-color;
+              width: 12px;
+              height: 12px;
+              left: -7px;
+              transform: rotate(45deg);
+              border-left: 1px solid #e8e8e8;
+              border-bottom: 1px solid #e8e8e8;
+              @include tabletAndMobile() {
+                top: -7px;
+                left: 20px;
+                transform: rotate(135deg);
+              }
+            }
+          }
+          .ratings {
+            display: flex;
+            align-items: center;
+          }
+          .name {
+          }
+          .date {
+            color: #ccc;
+          }
+          .comment {
+            color: $text-secondary-color;
+          }
+        }
+      }
+      .heading {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      .ratings {
+        display: flex;
+        align-items: center;
+        .description {
+          margin-right: 10px;
+        }
+      }
+
+      .form {
+        .formGroup {
+          margin-bottom: 20px;
+          .label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.6rem;
+          }
+          .formControl {
+            width: 100%;
+            font-size: 1.6rem;
+            border: 1px solid #e8e8e8;
+            padding: 4px 10px;
+            outline: none;
+            color: $text-secondary-color;
+            &:focus {
+              border: 1px solid $main-color;
+            }
+          }
+        }
+        .btnSubmit:hover {
+          background-color: $main-color;
+          color: $primary-color;
+        }
+      }
+    }
+    .shipping {
+      .heading {
+        font-size: 2.4rem;
+      }
+      .description {
+        margin: 20px 0;
+        display: block;
+        font-size: 1.6rem;
+      }
+      .noteList {
+        .noteItem {
+          margin-top: 10px;
+        }
+      }
+    }
+    .tabPane {
+      background-color: $primary-color;
+      width: 100%;
+      display: none;
+      margin-top: 20px;
+    }
+    .tabPane.active {
+      display: block;
+    }
+  }
+}
+.messageErr {
+  color: $main-color;
+  margin-left: 4px;
+}
+
+.messageErrCount {
+  color: $main-color;
+  margin-top: -14px;
+  margin-bottom: 5px;
+}
+
+.activeSize {
+  color: $main-color;
+}
+.toast {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+
+  .textHeader {
+    font-size: 1.8rem;
+  }
+  .toastMessage {
+    font-size: 1.7rem;
+  }
+  .toastSuccess {
+    color: #4caf50;
+  }
+  .toastFailed {
+    color: #f44336;
+  }
+}

@@ -1,0 +1,62 @@
+@import "commons/variables";
+.tab {
+  border-bottom: 2px solid rgb(211, 209, 209);
+  .heading {
+    flex: 1;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .tabList {
+    display: flex;
+    margin: 0 auto;
+    .tabItem {
+      transition: all 0.5s ease;
+      .link {
+        font-size: 1.8rem;
+        color: $text-primary-color;
+        margin-right: 30px;
+        display: block;
+        position: relative;
+        transition: all 0.5s ease;
+        padding-bottom: 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: $main-color;
+        }
+        &::after {
+          content: "";
+          width: 0;
+          position: absolute;
+          display: block;
+          border: none;
+          bottom: -2px;
+        }
+      }
+      .link:hover:after {
+        width: 100%;
+        border: 1px solid $main-color;
+        animation: fadeIn 0.5s ease;
+      }
+      .link.active:after {
+        width: 100%;
+        border: 1px solid $main-color;
+      }
+      .link.active {
+        color: $main-color;
+      }
+      &:last-child .link {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

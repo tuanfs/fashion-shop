@@ -1,0 +1,35 @@
+@import "commons/variables";
+.breadcrumb {
+  background-color: $third-color;
+  height: 200px;
+  margin: $header-height 0;
+  padding: 60px 0;
+  display: flex;
+
+  .content {
+    margin: auto;
+    font-size: 1.6rem;
+    .title {
+      font-size: 3.2rem;
+      color: #2e2e2e;
+      font-weight: 600;
+    }
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+    .link {
+      color: #666666;
+      margin-right: 3px;
+      .text:hover {
+        color: $main-color;
+      }
+    }
+    .description {
+      color: #1a1a1a;
+    }
+  }
+}

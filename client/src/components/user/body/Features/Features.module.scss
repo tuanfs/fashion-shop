@@ -1,0 +1,15 @@
+@import "commons/variables";
+.item {
+  display: flex;
+  align-items: center;
+  .content {
+    margin-left: 10px;
+    .heading {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .description {
+      color: $text-secondary-color;
+    }
+  }
+}

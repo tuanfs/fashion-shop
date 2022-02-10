@@ -1,0 +1,130 @@
+@import "commons/variables";
+.formItem {
+  background-color: $third-color;
+  width: 100%;
+  text-align: center;
+  padding: 45px 40px;
+  .heading {
+    color: #2e2e2e;
+    font-size: 3.4rem;
+    font-weight: 600;
+  }
+  .description {
+    color: #6d6d6d;
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    margin-top: 10px;
+  }
+  .form {
+    .message {
+      color: $main-color;
+      border: 1px solid;
+      padding: 6px;
+      display: none;
+    }
+    .message.active {
+      display: block;
+    }
+    .singleForm {
+      margin-bottom: 35px;
+      .errorInput {
+        position: absolute;
+        text-align: left;
+        color: $main-color;
+      }
+    }
+    .formControl {
+      color: $input-color;
+      font-size: 1.5rem;
+      border: 1px solid transparent;
+      outline: none;
+      padding: 8px 14px;
+      width: 100%;
+      transition: all 0.5s ease;
+
+      &:focus {
+        border-color: $main-color;
+      }
+    }
+    .error {
+      .formControl {
+        border: solid $main-color 1px;
+      }
+    }
+    .feature {
+      display: flex;
+      justify-content: space-between;
+    }
+    .featureItem {
+      position: relative;
+      .label {
+        display: flex;
+        align-items: center;
+        color: #6a6a6a;
+      }
+      .checkbox {
+        position: absolute;
+        opacity: 0;
+      }
+      .checkmark {
+        width: 16px;
+        height: 16px;
+        border: 1px solid $main-color;
+        display: block;
+        margin-right: 20px;
+        &::after {
+          content: "";
+          display: none;
+          position: absolute;
+          left: 5px;
+          top: 6px;
+          width: 5px;
+          height: 10px;
+          border: solid $main-color;
+          border-width: 0 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+      .link {
+        color: #414141;
+        &:hover {
+          color: $main-color;
+        }
+      }
+      .checkbox:checked ~ .checkmark:after {
+        display: block;
+      }
+      .policy {
+        margin: 0 4px;
+        color: $main-color;
+        cursor: pointer;
+      }
+    }
+    .btnSubmit {
+      padding: 15px 30px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+    }
+  }
+  .linkWrap {
+    text-align: left;
+    .link {
+      transition: all 0.5s ease;
+      color: #414141;
+
+      &:hover {
+        padding-left: 15px;
+        text-decoration: underline;
+        color: $main-color;
+      }
+    }
+  }
+}
+.login {
+}
+.register {
+}

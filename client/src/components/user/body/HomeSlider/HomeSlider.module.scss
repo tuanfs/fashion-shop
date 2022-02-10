@@ -1,0 +1,77 @@
+@import "commons/variables";
+@import "commons/mixins";
+
+.itemSlide {
+  position: relative;
+  z-index: 3;
+  .content {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    // transform: translateY(-50%);
+
+    width: 500px;
+    height: 100%;
+  }
+  .heading {
+    font-size: 5rem;
+    font-weight: 600;
+  }
+  .description {
+    font-size: 2rem;
+    color: $text-secondary-color;
+    margin: 10px 0;
+  }
+  .btn {
+    background-color: $main-color;
+  }
+  @include tablet() {
+    .content {
+      top: 20%;
+      left: 40px;
+      width: 300px;
+      height: 100%;
+    }
+    .heading {
+      font-size: 3rem;
+    }
+  }
+  @include mobile() {
+    .content {
+      top: 10%;
+      left: 40px;
+      width: 300px;
+    }
+    .heading {
+      font-size: 1.6rem;
+    }
+  }
+}
+.swiper {
+  z-index: 3;
+  margin-top: $header-height;
+  .slide {
+    width: 100%;
+  }
+  .btnSlide {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+    transform: translateY(-50%);
+    .icon {
+      font-size: 4rem;
+      color: rgb(185, 184, 184);
+    }
+  }
+  .btnLeft {
+    left: 10px;
+  }
+  .btnRight {
+    right: 10px;
+  }
+}
+.swiper:hover .btnSlide {
+  display: block;
+}

@@ -1,0 +1,34 @@
+@import "commons/variables";
+
+.pageNotFound {
+  .container {
+    margin: auto;
+    text-align: center;
+    .title {
+      color: $main-color;
+      font-size: 20rem;
+      font-weight: 600;
+    }
+    .subTitle {
+      font-size: 3rem;
+      color: $text-primary-color;
+    }
+    .description {
+      font-size: 2rem;
+      margin: 20px 0;
+      color: $text-secondary-color;
+    }
+    .link {
+      display: inline-block;
+      background-color: $main-color;
+      color: $primary-color;
+      padding: 10px 30px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      &:hover {
+        background-color: $text-primary-color;
+      }
+    }
+  }
+}

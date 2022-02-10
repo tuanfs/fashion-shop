@@ -1,0 +1,32 @@
+.thumbs {
+  position: relative;
+}
+.img {
+  height: 100%;
+  width: 100%;
+}
+.mySwiper2 {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  .slide2 {
+  }
+}
+.mySwiper {
+  margin-top: 20px;
+  height: 100px;
+  .slide1 {
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.btnSlide {
+  position: absolute;
+  top: 40%;
+}
+.thumbs:hover .btnSlide {
+  display: block;
+}

@@ -1,0 +1,53 @@
+@import "commons/variables";
+@import "commons/variables";
+.cartList {
+  background-color: white;
+  margin-top: 20px;
+  .cartItem {
+    color: $text-third-color;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-radius: 2px;
+    .top {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      .topIcon {
+        font-size: 5rem;
+        color: #3333;
+      }
+    }
+    .bottom {
+      text-align: center;
+      .link {
+        text-decoration: none;
+        color: $text-third-color;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .product {
+    background-color: #35baf6;
+    .bottom {
+      background-color: rgba(9, 107, 165, 0.4);
+    }
+  }
+  .order {
+    background-color: #6fbf73;
+    .bottom {
+      background-color: rgba(44, 124, 11, 0.4);
+    }
+  }
+  .shipping {
+    background-color: #d7e360;
+    .bottom {
+      background-color: rgba(146, 149, 5, 0.4);
+    }
+  }
+  .shipped {
+    background-color: #ff784e;
+    .bottom {
+      background-color: rgba(183, 52, 13, 0.4);
+    }
+  }
+}

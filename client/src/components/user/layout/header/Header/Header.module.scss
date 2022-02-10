@@ -1,0 +1,150 @@
+@import "commons/variables";
+@import "commons/mixins";
+.headerWrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $primary-color;
+}
+.header {
+  height: $header-height;
+  align-items: center;
+  width: 100%;
+  .headerRow {
+    height: 100%;
+  }
+  .logo {
+    font-size: 3rem;
+    margin: auto 0;
+  }
+  .container {
+    height: 100%;
+  }
+  .wrapLogo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    @include mobile() {
+      justify-content: flex-start;
+    }
+  }
+  .icon {
+    position: relative;
+    font-size: 1.8rem;
+    margin-right: 10px;
+    cursor: pointer;
+    @include tabletAndMobile() {
+      margin-right: 20px;
+      font-size: 2.2rem;
+    }
+    &:hover {
+      color: $main-color;
+    }
+    .numberOfCart {
+      background-color: $main-color;
+      color: $primary-color;
+      border-radius: 50%;
+      padding: 0 6px;
+      font-size: 1.2rem;
+      position: absolute;
+      top: -2px;
+      right: -12px;
+    }
+  }
+  .bars {
+    display: none;
+    margin-top: 4px;
+  }
+  @include tabletAndMobile() {
+    .bars {
+      display: block;
+    }
+  }
+  .icon.hide {
+    display: none;
+  }
+  .avatar {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    .img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .user:hover .dropdown {
+    display: block;
+  }
+
+  .user {
+    position: relative;
+
+    .dropdown {
+      position: absolute;
+      top: calc(100% + 5px);
+      right: 10px;
+      display: none;
+      background-color: $primary-color;
+      box-shadow: 0 -3px 10px rgb(231, 231, 231), 0 3px 10px rgb(228, 227, 227);
+      min-width: 200px;
+      transition: all 0.5s ease;
+      border-radius: 3px;
+      &::before {
+        content: "";
+        background-color: transparent;
+        height: 10px;
+        width: 100%;
+        position: absolute;
+        top: -10px;
+      }
+      .item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        &:first-child {
+          border-bottom: 1px solid #ccc;
+        }
+        &:last-child {
+          border-top: 1px solid #ccc;
+        }
+        .avatar {
+          min-width: 40px;
+          min-height: 40px;
+        }
+        .info {
+          .name {
+            font-weight: 600;
+          }
+        }
+        .link {
+          width: 100%;
+          transition: all 0.5s ease;
+          &:hover {
+            padding-left: 10px;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+.navWrap {
+  @include tabletAndMobile() {
+    position: fixed;
+    z-index: 20;
+  }
+}

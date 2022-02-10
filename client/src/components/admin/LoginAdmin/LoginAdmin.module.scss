@@ -1,0 +1,29 @@
+@import "commons/variables";
+
+.loginForm {
+  height: 400px;
+  width: 600px;
+  background-color: $secondary-color;
+  margin: auto;
+  margin-top: 25vh;
+  padding: 40px;
+  border-radius: 2px;
+  color: $text-secondary-color;
+  text-align: center;
+  font-size: 1.4rem;
+  .heading {
+    color: $text-primary-color;
+    font-size: 3rem;
+  }
+  .btnLogin {
+    background-color: $btn-primary-color;
+    color: $text-third-color;
+    margin-top: 20px;
+    width: 100px;
+    padding: 6px 0;
+    font-size: 1.4rem;
+  }
+  .formControl {
+    padding: 10px;
+  }
+}

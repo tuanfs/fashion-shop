@@ -1,0 +1,52 @@
+@import "commons/variables";
+.banner {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+
+  .imgWrap {
+    height: 100%;
+    .img {
+      transition: all 0.5s ease;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    .subTitle {
+      font-size: 2.2rem;
+      color: #a4a4a6;
+      font-weight: 400;
+      .percent {
+        color: $main-color;
+        font-weight: 500;
+      }
+    }
+    .title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .btn {
+      background-color: $main-color;
+      margin-top: 20px;
+      display: block;
+      border-radius: 4px;
+      padding: 0 14px;
+      height: 30px;
+    }
+  }
+  &:hover .btn {
+    background-color: $text-primary-color;
+  }
+}

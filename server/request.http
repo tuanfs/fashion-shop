@@ -1,0 +1,37 @@
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "name": "Le Van Tuan",
+    "email": "tuan@gmail.com",
+    "password": "tuan",
+    "avatar": "img.png"
+}
+
+### 
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "tuan@gmail.com",
+    "password": "tuanfs"
+}
+
+### 
+PUT http://localhost:5000/api/user/change-password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWNkOWFiNzcyMWNmMmM2M2QzZmUzYWUiLCJpYXQiOjE2NDA4NjYxOTR9.UXgLYC82V8g28vPXyYMG9vSr8fVBDsd1jt6nZ3oQduM
+
+{
+    "password": "tuan",
+    "newPassword": "tuanfs"
+}
+
+###
+POST http://localhost:5000/api/admin
+Content-Type: application/json
+
+{
+    "name": "tuan",
+    "password": "tuan"
+}

@@ -1,0 +1,30 @@
+@import "commons/variables";
+.item {
+  position: relative;
+  .headingWrap {
+    border-bottom: 2px solid #ccc;
+    .heading {
+      font-size: 2.4rem;
+      font-weight: 600;
+      display: inline-block;
+      &::after {
+        content: "";
+        background-color: $main-color;
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  .btnSlide {
+    position: absolute;
+    right: 50%;
+    display: block;
+  }
+}
+.listProduct {
+  position: relative;
+  height: 100%;
+}

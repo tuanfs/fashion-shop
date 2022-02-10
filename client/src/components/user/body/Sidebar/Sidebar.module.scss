@@ -1,0 +1,208 @@
+@import "commons/variables";
+@import "commons/mixins";
+
+.sidebar {
+  .list {
+    transition: all 0.5s ease;
+    .item {
+      transition: all 0.5s ease;
+      .heading {
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        color: $text-primary-color;
+        padding: 4px 0;
+        border-bottom: 1px solid #ccc;
+      }
+      .content {
+        margin: 20px 0;
+      }
+      .form {
+        display: flex;
+        height: 100%;
+        .input {
+          width: 100%;
+          .formControl {
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 8px 8px;
+            outline: none;
+            color: $text-secondary-color;
+            border: 1px solid #e1e1e1;
+            border-right: none;
+          }
+          .formControl:focus {
+            border-color: $main-color;
+          }
+        }
+        .submit {
+          width: 44px;
+          background-color: $text-primary-color;
+          display: block;
+          color: #fff;
+          border: none;
+          outline: none;
+        }
+      }
+      .navList {
+        display: flex;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+        @include tabletAndMobile() {
+          transform: scaleY(0);
+          transform-origin: 0 0 0;
+          height: 0;
+          &.active {
+            height: 100%;
+            transform: scaleY(1);
+          }
+        }
+        .navItem {
+          flex: 50%;
+          position: relative;
+          margin-bottom: 20px;
+          transition: all 0.5s ease;
+
+          .checkbox {
+            width: 0;
+            height: 0;
+          }
+          .label {
+            color: $text-primary-color;
+            font-size: 1.4rem;
+          }
+          .box {
+            width: 14px;
+            height: 14px;
+            border: 1px solid #e1e1e1;
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+            top: 1px;
+            background-color: $primary-color;
+            &::after {
+              content: "";
+              display: none;
+              position: absolute;
+              left: 4px;
+              top: 0;
+              width: 5px;
+              height: 10px;
+              border: solid $main-color;
+              border-width: 0 2px 2px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+          }
+          .checkbox:checked ~ .box::after {
+            display: block;
+          }
+        }
+      }
+    }
+    .aroundPrice {
+      .navList {
+        display: block;
+        @include tabletAndMobile() {
+          display: flex;
+
+          &.active {
+            height: 100%;
+            transform: scaleY(1);
+          }
+          flex-wrap: wrap;
+        }
+        .navItem {
+          display: flex;
+          align-items: center;
+          @include tabletAndMobile() {
+            flex: 50%;
+          }
+        }
+      }
+    }
+    .material {
+      .navMore {
+        display: none;
+      }
+      .navMore.navList2 {
+        display: flex;
+      }
+      .navList {
+        .navItem {
+          flex: 33.3333%;
+          .label {
+            position: relative;
+            top: 0;
+            background-color: rgb(224, 224, 224);
+            padding: 4px 10px;
+            border-radius: 3px;
+            color: #7f7fa0;
+            border-color: #7f7fa0;
+            border-width: 1px;
+            border-style: solid;
+
+            overflow: hidden;
+            &:hover {
+              background-color: transparent;
+              border-color: $main-color;
+              color: $main-color;
+            }
+            .tag {
+              position: absolute;
+              top: 0;
+              right: 0;
+
+              &::before {
+                content: "";
+                border-width: 20px;
+                border-style: solid;
+                position: absolute;
+                top: -1px;
+                right: -20px;
+                transform: rotate(90deg);
+                border-color: transparent transparent transparent $main-color;
+                position: absolute;
+              }
+              .icon {
+                font-size: 1rem;
+                position: absolute;
+                top: 0;
+                right: 2px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ratings {
+      .navList {
+        display: block;
+      }
+      .navItem {
+        .label {
+          display: flex;
+          align-items: center;
+          .text {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+    .btnNav {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $main-color;
+      font-size: 1.5rem;
+      text-align: center;
+      width: 100%;
+      display: none;
+    }
+    .btnNavActive {
+      display: block;
+    }
+  }
+}

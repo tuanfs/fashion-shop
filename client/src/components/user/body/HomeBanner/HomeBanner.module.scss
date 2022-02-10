@@ -1,0 +1,42 @@
+@import "commons/variables";
+.banner {
+  .bannerItem {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    z-index: 3;
+    .content {
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      width: 140px;
+      .description {
+        color: $text-secondary-color;
+        font-size: 1.6rem;
+      }
+      .heading {
+        color: $text-primary-color;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+      .btn {
+        background-color: $main-color;
+        min-width: 100px;
+      }
+    }
+    .imgWrap {
+      overflow: hidden;
+      transition: all 0.5s ease;
+
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:hover .imgWrap {
+      transform: scale(1.1);
+    }
+  }
+}
