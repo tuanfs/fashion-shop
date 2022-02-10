@@ -106,6 +106,8 @@
       .menuItem {
         margin: 16px 0;
         cursor: pointer;
+        width: 200px;
+
         @include tabletAndMobile() {
           &:hover {
             color: $main-color;
