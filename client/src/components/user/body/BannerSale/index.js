@@ -8,7 +8,7 @@ export default function BannerSale() {
     <div className='section'>
       <Container>
         <Row className='gx-5 gy-5'>
-          <Col lg={4} md={6} sm={6}>
+          <Col lg={6} md={6} sm={6}>
             <div className={styles.banner} data-aos='fade-right'>
               <div className={styles.imgWrap}>
                 <img
@@ -28,7 +28,7 @@ export default function BannerSale() {
               </div>
             </div>
           </Col>
-          <Col lg={4} md={6} sm={6}>
+          <Col lg={6} md={6} sm={6}>
             <div className={styles.banner} data-aos='fade-left'>
               <div className={styles.imgWrap}>
                 <img
