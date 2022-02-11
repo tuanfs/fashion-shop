@@ -206,4 +206,10 @@
       display: block;
     }
   }
+  .btnShow {
+    display: none;
+    @include tabletAndMobile() {
+      display: block;
+    }
+  }
 }
