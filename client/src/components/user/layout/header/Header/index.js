@@ -84,7 +84,7 @@ export default function Header() {
                       <div className={styles.avatar}>
                         <img
                           className={styles.img}
-                          src='https://res.cloudinary.com/tuanfs/image/upload/v1642872166/fashion-shop/rose_vittua.jpg'
+                          src='https://res.cloudinary.com/tuanfs/image/upload/v1644566340/fashion-shop/avatar_nfv8gu.jpg'
                           alt='Ảnh đại diện'
                         />
                       </div>
@@ -93,7 +93,7 @@ export default function Header() {
                           <div className={styles.avatar}>
                             <img
                               className={styles.img}
-                              src='https://res.cloudinary.com/tuanfs/image/upload/v1642872166/fashion-shop/rose_vittua.jpg'
+                              src='https://res.cloudinary.com/tuanfs/image/upload/v1644566340/fashion-shop/avatar_nfv8gu.jpg'
                               alt='Ảnh đại diện'
                             />
                           </div>
@@ -136,12 +136,14 @@ export default function Header() {
                   <BsSuitHeart />
                 </div>
 
-                <div className={styles.icon} onClick={handleShowCart}>
-                  <BsBag />
-                  <span className={styles.numberOfCart}>
-                    {cart.cartItems ? cart.cartItems.length : 0}
-                  </span>
-                </div>
+                {isAuthenticated && (
+                  <div className={styles.icon} onClick={handleShowCart}>
+                    <BsBag />
+                    <span className={styles.numberOfCart}>
+                      {cart.cartItems ? cart.cartItems.length : 0}
+                    </span>
+                  </div>
+                )}
                 <div
                   className={clsx(styles.icon, styles.bars)}
                   onClick={onModalNav}

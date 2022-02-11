@@ -8,5 +8,3 @@ const url =
 export default axios.create({
   baseURL: url,
 });
-
-// http://localhost:5000/api

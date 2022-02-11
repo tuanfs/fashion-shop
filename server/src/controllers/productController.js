@@ -130,6 +130,7 @@ exports.getOneProduct = async (req, res) => {
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
+
 // Private
 // Admin
 // Update Product
