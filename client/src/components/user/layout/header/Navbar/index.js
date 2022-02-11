@@ -7,7 +7,6 @@ export default function Navbar(props) {
   const { showModalNav, onHideModalNav } = props;
 
   const navOnClick = (e) => {
-    console.log(e.target);
     if (
       e.target.className.includes("subLink") ||
       e.target.className.includes("text")

@@ -15,7 +15,7 @@ export const fetchAllProduct = createAsyncThunk(
       `/product?keyword=${keyword || ""}&category=${category || ""}&gender=${
         gender || ""
       }&page=${page || 0}&priceDecrease[gte]=${priceGte}${
-        priceLte > 0 ? `&priceDecrease[lte]=(${priceLte})` : ""
+        priceLte > 0 ? `&priceDecrease[lte]=${priceLte}` : ""
       }`
     );
     return res.data;
