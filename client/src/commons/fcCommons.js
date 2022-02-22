@@ -5,6 +5,7 @@ export const setParams = (paramsValue) => {
       paramsList.push({ key, value });
     }
   }
+
   const search = paramsList.reduce((prev, currValue, index) => {
     if (index === 0) {
       return prev + `${currValue.key}=${currValue.value}`;

@@ -78,7 +78,7 @@ export default function Header() {
                 >
                   <BsSearch />
                 </div>
-                <div className={styles.user}>
+                <div className={clsx(styles.user, styles.icon)}>
                   {isAuthenticated ? (
                     <>
                       <div className={styles.avatar}>
